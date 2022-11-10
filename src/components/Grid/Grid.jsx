@@ -12,6 +12,7 @@ export const GridItem = styled.div`
   align-items: center;
   justify-content: center;
   gap: 10px;
+  height: 100%;
 
   background-color: #fff;
   border: 4px solid #fff;

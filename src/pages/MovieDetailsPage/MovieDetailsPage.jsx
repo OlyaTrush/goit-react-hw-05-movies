@@ -56,7 +56,7 @@ export const MovieDetailsPage = () => {
           <img
             src={imagePath(film.poster_path)}
             alt={film.original_title}
-            width="300"
+            width="300" height="200"
           />
 
           <div style={{ paddingTop: 30, paddingBottom: 30 }}>
