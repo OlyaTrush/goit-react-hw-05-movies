@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import {
   useLocation,
   Link,
@@ -9,6 +9,7 @@ import {
 import { Container, Section } from 'components';
 import { getMovieDetails } from 'Service/api-service';
 import { imagePath } from 'helpers/imagePath';
+import Loader from 'components/Loader/Loader';
 
 export const MovieDetailsPage = () => {
   const [film, setFilm] = useState({});
@@ -85,7 +86,9 @@ export const MovieDetailsPage = () => {
             </Link>
           </li>
         </ul>
-        <Outlet />
+        <Suspense fallback={<Loader />}>
+              <Outlet />
+            </Suspense>
       </Container>
     </Section>
   );
