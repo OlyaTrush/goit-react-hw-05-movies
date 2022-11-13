@@ -7,14 +7,14 @@ import {
   Character,
 } from './CastList.styled';
 
-import { imagePath } from 'constants/imagePath';
+import { ActorsPath } from 'constants/ActorsPath';
 
 export const CastList = ({ castData }) => (
   <StyledCastList>
     {castData.map(({ cast_id, name, profile_path, character }) => (
       <CastItem key={cast_id}>
         <CastImage
-          src={imagePath(profile_path)}
+          src={ActorsPath(profile_path)}
           alt={name}
           width={230}
           height={345}
